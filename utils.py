@@ -1,12 +1,26 @@
+import collections
 from threading import Timer
+
+
+def format_satoshi(self, val):
+    return "{:10.8f}".format(val)
+
+
+def format_dollar(val):
+    return "{:10.2f}".format(val)
+
+
+def compare(x, y):
+    return collections.Counter(x) == collections.Counter(y)
+
 
 class RepeatedTimer(object):
     def __init__(self, interval, function, *args, **kwargs):
-        self._timer     = None
-        self.interval   = interval
-        self.function   = function
-        self.args       = args
-        self.kwargs     = kwargs
+        self._timer = None
+        self.interval = interval
+        self.function = function
+        self.args = args
+        self.kwargs = kwargs
         self.is_running = False
         self.start()
 
