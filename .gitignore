@@ -1,13 +1,9 @@
 /build
 /dist
-/sounds
 /old_release
 /.vscode
 /__pycache__
 /.idea
 *.bat
 *.pickle
-*.spec
-main.spec
-.main.spec
 mao.ico
